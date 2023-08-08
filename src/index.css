@@ -8,6 +8,10 @@
   --youtube-clr: #ff0000;
 }
 
+::selection {
+  color: var(--youtube-clr);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -27,20 +31,24 @@ code {
     monospace;
 }
 
-body::-webkit-scrollbar {
+body::-webkit-scrollbar,
+.left-nav::-webkit-scrollbar {
   width: 12px;
 }
 
-body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track,
+.left-nav::-webkit-scrollbar-track {
   background: var(--black-clr);
 }
 
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb,
+.left-nav::-webkit-scrollbar-thumb {
   background-color: #ebedeef3;
   border-radius: 20px;
   border: 2px solid var(--black-clr);
 }
-body::-webkit-scrollbar-thumb:hover {
+body::-webkit-scrollbar-thumb:hover,
+.left-nav::-webkit-scrollbar-thumb:hover {
   background-color: #ebedeec5;
 }
 

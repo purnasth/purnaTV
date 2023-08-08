@@ -7,6 +7,8 @@ import { DataContext } from "../context/ContextApi";
 import { MdOutlineLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
 
+import purna_shrestha from "../assets/purna_shrestha.svg";
+
 const LeftNav = () => {
   const { selectedCategory, setSelectedCategory, mobileMenu, theme, setTheme } =
     useContext(DataContext);
@@ -32,7 +34,7 @@ const LeftNav = () => {
 
   return (
     <div
-      className={`w-[240px] md:block overflow-y-auto h-full py-4 bg-white md:bg-white dark:bg-black absolute md:relative z-10  md:translate-x-0 transition-all ${
+      className={`left-nav w-[240px] md:block overflow-y-auto h-full py-4 bg-white md:bg-white dark:bg-black fixed md:relative z-10  md:translate-x-0 transition-all ${
         mobileMenu ? "translate-x-0" : "translate-x-[-240px]"
       }`}
     >
@@ -77,14 +79,19 @@ const LeftNav = () => {
           );
         })}
         <hr className="my-5 border-white/[0.2] md:border-black/[0.2] border dark:border dark:border-white/[0.2]" />
-        <div className="text-white/[0.5] md:text-black/[0.7] dark:text-white/[0.5] text-[12px]">
+        <div className="text-white/[0.5] md:text-black/[0.7] dark:text-white/[0.5] text-[12px] text-center">
           Build by{" "}
           <a
             href="https://purnashrestha.com.np"
             target="_blank"
             rel="noreferrer"
+            className="inline-block select-none"
           >
-            Purna Shrestha
+            <img
+              src={purna_shrestha}
+              alt="Purna Shrestha"
+              className="text-white"
+            />
           </a>
         </div>
       </div>

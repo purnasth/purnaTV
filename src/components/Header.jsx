@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import purna from "../assets/purna.webp";
-import purnaTvLogo from "../assets/purnaTv.svg";
+import purnaTvLogo from "../assets/purnaTv_high_quality_logo.svg";
 import purnaTvLogoMobile from "../assets/purnaTv_mobile.svg";
 
 import { SlMenu } from "react-icons/sl";
@@ -94,7 +94,7 @@ const Header = () => {
           <img
             src={purnaTvLogoMobile}
             alt="YouTube Mobile"
-            className="h-8 w-8 md:hidden rounded-full ml-1"
+            className="w-8 md:hidden rounded-full ml-1"
           />
         </Link>
       </div>
